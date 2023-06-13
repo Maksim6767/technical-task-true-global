@@ -1,0 +1,1 @@
+# technical-task-true-global
