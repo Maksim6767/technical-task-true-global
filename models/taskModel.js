@@ -13,7 +13,7 @@ const taskSchema = new mongoose.Schema({
     dateEnd: {
         type: String,
   },
-     category: {
+    category: {
         type: mongoose.Types.ObjectId,
         ref: 'Category',
         required: [true, 'Task must have an category'],
@@ -24,6 +24,12 @@ const taskSchema = new mongoose.Schema({
         ref: 'User',
         required: [true, 'Task must have an owner'],
   },
+    statusTask: {
+        type: String,
+        enum: ['to_do', 'in_progress', 'review','done'],
+        default: 'to_do',
+        trim: true,
+    },
 },
 {
     versionKey: false,

@@ -13,7 +13,7 @@ router.use(protect);
 router.post('/', checkTaskData, tasksCtrl.createTask);
 router.get('/', tasksCtrl.getTasksList);
 router.get('/:taskId', checkTaskId, tasksCtrl.getTaskById);
-router.patch('/:taskId', checkTaskId, checkTaskData, tasksCtrl.editTask);
+router.patch('/:taskId', checkTaskId, tasksCtrl.editTask);
 router.delete('/:taskId', checkTaskId, tasksCtrl.deleteTask);
 
 module.exports = router; 

@@ -7,6 +7,7 @@ exports.taskDataValidator = (data) => Joi.object()
         dateStart: Joi.string().required(),
         dateEnd: Joi.string().required(),
         category: Joi.string().required(),
+        statusTask: Joi.string().lowercase().trim().min(2).max(30),
     })
     .validate(data);
     

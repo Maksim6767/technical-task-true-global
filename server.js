@@ -4,6 +4,7 @@ require('colors');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const startBot = require('./bot');
 
 dotenv.config({ path: './.env' }); 
 
@@ -56,8 +57,11 @@ app.use((err, req, res, next) => {
   })
 });
 
+startBot();
+
 const port = 3000;
 
 app.listen(process.env.PORT || 4000, () => {
   console.log(`Server up and running on port: ${port}`.bgBlue);
 });
+

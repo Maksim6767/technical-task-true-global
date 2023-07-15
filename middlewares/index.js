@@ -1,11 +1,11 @@
-const usersCtrl = require('./usersCtrl');
-const authCtrl = require('./authCtrl');
-const categoriesCtrl = require('./categoriesCtrl');
-const tasksCtrl = require('./tasksCtrl');
+const authMiddleware = require('./authMiddleware');
+const userMiddleware = require('./userMiddleware');
+const categoryMiddleware = require('./categoryMiddleware');
+const taskMiddleware = require('./taskMiddleware');
 
 module.exports = {
-    usersCtrl,
-    authCtrl,
-    categoriesCtrl,
-    tasksCtrl,
+    authMiddleware,
+    userMiddleware,
+    categoryMiddleware,
+    taskMiddleware,
 };

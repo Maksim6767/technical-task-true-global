@@ -4,7 +4,7 @@ const {
     checkUserId,
     checkCreateUserData,
     checkUpdateUserData,
-} = require('../middlewares/usermiddleware');
+} = require('../middlewares/userMiddleware');
 const { protect, allowFor } = require('../middlewares/authMiddleware');
 const userRolesEnum = require('../constants/userRolesEnum');
 

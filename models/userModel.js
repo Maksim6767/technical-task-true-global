@@ -19,6 +19,10 @@ const userSchema = new mongoose.Schema({
         enam: Object.values(userRolesEnum), 
         default: userRolesEnum.USER,
     },
+    chatId: {
+        type: Number,
+        default: 0,
+  },
 },
 {versionKey: false},
 );
